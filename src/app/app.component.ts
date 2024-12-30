@@ -11,4 +11,12 @@ export class AppComponent {
   data = {
     title: 'My Angular Course',
   };
+
+  onLogoClicked() {
+    alert('Logo clicked');
+  }
+
+  onKeyUp(newTitle: string) {
+    this.data.title = newTitle;
+  }
 }

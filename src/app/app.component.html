@@ -176,6 +176,7 @@
         viewBox="0 0 982 239"
         fill="none"
         class="angular-logo"
+        (click)="onLogoClicked()"
       >
         <g clip-path="url(#a)">
           <path
@@ -217,7 +218,12 @@
         </defs>
       </svg>
       <h1>Hello, {{ data.title }}</h1>
-      <input class="demo" />
+      <input
+        class="demo"
+        (keyup)="onKeyUp(titleInput.value)"
+        [value]="data.title"
+        #titleInput
+      />
     </div>
     <!-- <div class="divider" role="separator" aria-label="Divider"></div> -->
   </div>
